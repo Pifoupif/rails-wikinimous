@@ -1,0 +1,17 @@
+<h1>The Articles:</h1>
+
+<div class="list">
+  <% @articles.each do |art| %>
+  <li class="article">
+    <%= link_to "#{art.title}", article_path(art.id) %>
+    <%= link_to "edit", edit_article_path(art.id) %>
+  </li>
+  <% end %>
+
+<div class="add-article">
+  <%= link_to "Add new article", new_article_path %>
+</div>
+
+</div>
+
+
